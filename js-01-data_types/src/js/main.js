@@ -135,3 +135,91 @@ console.log( typeof myNumber ); // string
 // Number(): Convierte todo o devuelve NaN si hay letras.
 // parseInt(): Busca enteros al inicio.
 // parseFloat(): Busca decimales al inicio.
+<<<<<<< HEAD
+=======
+
+/*
+ Number() Vs parseInt() y parseFloat()
+  - Number convierte enteros y decimales
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN ( -123abc => NaN )
+  - parseInt convierte solo la parte entera
+  - parseFloat convierte la parte entera y decimales
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico ( "123-567")
+*/
+
+console.log( Number("68.58") ); // 68.58
+console.log( parseInt("68.58") ); // 68
+console.log( parseFloat("68.58") ); // 68.58
+
+console.log( Number("68.58 dolares") ); // NaN
+console.log( parseInt("68.58 dolares") ); // 68
+console.log( parseFloat("68.58 dolares") ); // 68.58
+
+console.log( Number("$68.58 dolares") ); // NaN
+console.log( parseInt("$68.58 dolares") ); // NaN
+console.log( parseFloat("$68.58 dolares") ); // NaN
+
+console.log( Number("68-58") ); // NaN
+console.log( parseInt("68-58") ); // 68
+console.log( parseFloat("68-58") ); // 68
+
+
+console.log( Number( true ) ); // 1
+console.log( Number( false ) ); // 0
+
+console.log( Number( [] ) ); // 0
+console.log( Number( [30] ) ); // 30
+console.log( Number( [30,40] ) ); // NaN
+
+// Conversión a tipo boolean
+// En la conversión a boolean los siguientes valores son false:
+// ""(empty string), 0, NaN, null, undefined
+console.log( Boolean(1) ); // true
+console.log( Boolean(10000) ); // true
+console.log( Boolean(-1000) ); // true
+console.log( Boolean(0) ); // false
+console.log( Boolean(NaN) ); // false
+
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true
+console.log( Boolean("1") ); // true
+console.log( Boolean("0") ); // true
+
+
+// Conversión explicita a String
+console.log( String( 123 ) ); // "123"
+console.log( String( 12.34 ) ); // "12.34"
+console.log( "Mi número es " + 12.34 ); // "Mi número es 12.34"
+console.log( "Mi número es " + String(12.34) ); // "Mi número es 12.34"
+console.log( String( true ) ); // "true"
+console.log( String( null ) ); // "null"
+console.log( String( undefined ) ); // "undefined"
+console.log( String( [] ) ); // empty string-> ""
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+console.log( String( {} ) ); // [object Object]
+console.log( String( {name:"Serch", active:true} ) ); // [object Object]
+
+// Para lo objetos se recomienda usar el métod JSON.stringyfy( object )
+// convierte un objeto en formato JSON
+console.log( JSON.stringify( {name:"Serch", active:true} ) ); // {"name":"Serch","active":true}
+
+const calificaciones = [8,6,5,9];
+console.log("Mi calificación es " + calificaciones); // "Mi calificación es 8,6,5,9"
+
+
+
+// Resumen:
+
+// Number()
+// [] (empty array) -> 0, [30]-> 30, [30,30]->NaN, false-> 0, true-> 1
+
+// String()
+// [] -> "", [12,2]->"12,2", function(){}-> "function(){}"
+// {} ->"[object,object]", {clave:valor, age:17} ->"[object,object]"
+
+// Para convertir un objeto a string, la forma correcta es usar
+// el método JSON.stringyfy( objeto );
+
+// Resumen : https://www.w3schools.com/js/js_type_conversion.asp
+>>>>>>> upstream/serch
