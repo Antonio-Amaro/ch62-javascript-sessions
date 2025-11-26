@@ -135,8 +135,7 @@ console.log( typeof myNumber ); // string
 // Number(): Convierte todo o devuelve NaN si hay letras.
 // parseInt(): Busca enteros al inicio.
 // parseFloat(): Busca decimales al inicio.
-<<<<<<< HEAD
-=======
+
 
 /*
  Number() Vs parseInt() y parseFloat()
@@ -222,4 +221,3 @@ console.log("Mi calificación es " + calificaciones); // "Mi calificación es 8,
 // el método JSON.stringyfy( objeto );
 
 // Resumen : https://www.w3schools.com/js/js_type_conversion.asp
->>>>>>> upstream/serch
