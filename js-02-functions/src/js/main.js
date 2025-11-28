@@ -156,6 +156,7 @@ const multiply = (a, b) => a * b;
 // Crear una función que sume dos números
 const sum = (a, b) => a + b;
 const divide = (a, b) => a / b;
+const isDivisible = (a) => 6 % 3
 
 
 console.log(`Realizando una resta: ${calculate(5, 3, subtract)}`); // 2
@@ -167,3 +168,4 @@ console.log(`Realizando una división: ${calculate(6, 3, divide )}`); // 2
 // Aplicar una función que calcule la potencia de un número
 console.log(`Realizando una división: ${calculate(6, 3, (a, b) => a ** b ) }`); // Math.pow(a,b) 
 // Aplicar una función que calcule el residuo de una devisión, para saber si 6 es divisible entre 3
+console.log(`Realizando el modulo de 6: ${isDivisible(6)}`)
