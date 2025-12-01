@@ -254,3 +254,26 @@ console.log( getAccessLevel("admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("super_admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("editor") ); // Acceso para editar contenido
 console.log( getAccessLevel("customer") ); // Acceso denegado
+
+const weatherSwitchCase = code => {
+    let message = ''
+    switch (code) {
+        case 0:
+            message = "Clear Sky"
+            break;
+        case 1:
+        case 2:
+        case 3:
+            message = "Mainly clear, partly cloudy, and overcast"
+            break;
+        case 45:
+        case 48:
+            message = "Fog and depositing rime fog"
+            break;
+        default:
+            message = "Code not defined"
+    }
+    return message   
+}
+
+console.log(weatherSwitchCase(3))
