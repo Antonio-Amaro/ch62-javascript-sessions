@@ -277,7 +277,6 @@ console.log( getAccessLevel("super_admin") ); // Acceso completo al sistema
 console.log( getAccessLevel("editor") ); // Acceso para editar contenido
 console.log( getAccessLevel("customer") ); // Acceso denegado
 
-<<<<<<< HEAD
 const weatherSwitchCase = code => {
     let message = ''
     switch (code) {
@@ -300,51 +299,6 @@ const weatherSwitchCase = code => {
 }
 
 console.log(weatherSwitchCase(3))
-=======
-
-/*
- Refactorizar la función getWeather usando switch-case
-*/
-//const getWeatherSwitch=(codigo)=>
-    const getWeatherSwitch=(codigo)=>{
-     let message;
-     switch ( codigo){
-        case 0 :
-            message="Clear Sky";
-            break
-        case 1:
-        case 2:
-        case 3:
-            message="Mainly clear, partly cloudy, and overcast";
-            break;
-        case 45:
-        case 48: 
-            message="Fog and depositing rime fog";
-            break
-        default :
-            message="no definido";
-     }
-     return message;  
-    } 
-
-console.log (getWeatherSwitch(45));
-
-    const getWeatherSwitch2=(codigo)=>{
-     switch ( codigo){
-        case 0 :
-            return "Clear Sky";
-        case 1:
-        case 2:
-        case 3:
-            return "Mainly clear, partly cloudy, and overcast";
-        case 45:
-        case 48: 
-            return "Fog and depositing rime fog";
-        default :
-            return "no definido";
-     } 
-    }
-console.log (getWeatherSwitch2(0));
 
 // ==========================================================
 
@@ -399,4 +353,3 @@ console.log(evaluarElNumeroSwitch(-45) ); // Negativo
 console.log(evaluarElNumeroSwitch(0) ); // Cero
 console.log(evaluarElNumeroSwitch(45) ); // Positivo
 console.log(evaluarElNumeroSwitch(100) ); // Grande
->>>>>>> upstream/serch
